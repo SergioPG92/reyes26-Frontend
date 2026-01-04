@@ -3,7 +3,7 @@ h2 {
 }
 
 body{
-    background-image: url('./assets/recursos/fondo_reyes.jpg');
+    background-image: url('/recursos/fondo_reyes.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -12,7 +12,7 @@ const ComprobarRegaloComponent: React.FC<Props> = ({ texto }) => {
         {texto ==='ESTEFANÍA' ||texto ==='ESTEFANIA' ||texto ==='Estefanía' || texto ==='estefanía' || texto ==='Estefania' || texto ==='estefania' ? ( 
             <div className="divRegalo">
           <p className="parrafo">¡Felicidades {texto}!</p>
-          <img src="./assets/recursos/regReyes.jpg" alt="Regalo de Estefanía" />
+          <img src="/recursos/regReyes.jpg" alt="Regalo de Estefanía" />
            </div>
         ) : ( 
           <p className="parrafo">Lo siento {texto}, no tienes regalo este año.</p>
