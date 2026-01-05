@@ -131,3 +131,22 @@ input {
     .divPregunta2 { flex-direction: row; } /* fila en tablet/pc */
 }
 
+
+@media (min-width: 350px) {
+    .divPregunta2 {
+        flex-direction: row; /* fila en pantallas grandes */
+    }
+    .titulo { 
+        font-size: 3rem; 
+    }
+    .felicitacion { 
+        font-size: 3.5rem;
+     }
+    .imagenRegalo { 
+        max-width: 380px; 
+    }
+    .divPregunta2 {
+         flex-direction: row; 
+        } /* fila en tablet/pc */
+}
+
