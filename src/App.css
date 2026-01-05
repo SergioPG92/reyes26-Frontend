@@ -1,90 +1,133 @@
-h2 {
-    font-size: 1.5em;
+/* =========================================
+   RESET Y AJUSTES GENERALES
+========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    background-image: url('/recursos/fondo_reyes.jpg');
-    background-size: cover;
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;   /* evita scroll horizontal */
+    font-size: 10px;      /* base para rem */
+}
+
+/* =========================================
+   FONDO
+========================================= */
+body {
+    background-image: url('/recursos/fondo_reyes_2.png');
+    background-size: cover;       /* cubre toda la pantalla */
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
-    padding: 0% 20%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* centra contenido verticalmente */
+    align-items: center;         /* centra contenido horizontalmente */
+    padding: 0 5%;               /* pequeño margen interno */
 }
 
-.titulo{
+/* =========================================
+   TIPOGRAFÍA
+========================================= */
+h2 {
+    font-size: 1.5rem;
+}
+
+.titulo {
     color: rgb(208, 211, 29);
-    font-size: 3em;
-}
-
-.parrafo{
-    color: white;
-    font-size: 1.2em;
+    font-size: 3rem;
     text-align: center;
 }
 
-.botonPregunta{
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: none;
-    background-color: #e0ff57c0;
-    color: rgb(44, 90, 160);
-    font-weight: bolder;
-    cursor: pointer;
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
+.parrafo {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: bold;;
 }
 
-.divPregunta{
+.felicitacion {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* =========================================
+   CONTENEDORES FLEX
+========================================= */
+.divPregunta,
+.divPreguntaNombre,
+.divPregunta2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;       /* vertical en móvil */
     align-items: center;
+    justify-content: center;
+    width: 100%;                  /* nunca excede body */
+    gap: 1rem;
+    
     
 }
 
-.divPregunta2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+/* =========================================
+   INPUTS
+========================================= */
+input {
+    width: 80%;          /* se adapta al contenedor */
+    max-width: 200px;    /* límite en píxeles */
+    min-width: 50px;
+    height: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+    background-color: blueviolet;
+    border: 1px solid #e0ff57c0;
+    color: #e0ff57c0;
+    border-radius: 5px;
 }
 
-.divPreguntaNombre{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.botonPregunta2{
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 2em;
+/* =========================================
+   BOTONES
+========================================= */
+.botonPregunta,
+.botonPregunta2 {
+    width: 80%;          /* se adapta al contenedor */
+    max-width: 250px;
+    padding: 1rem 2rem;
+    font-size: 2rem;
     border-radius: 5px;
     border: none;
     background-color: #e0ff57c0;
     color: rgb(44, 90, 160);
     font-weight: bolder;
     cursor: pointer;
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 1px 5px rgba(255,255,255,0.3);
 }
 
-input{
-    height: 2em;
-    background-color: blueviolet;
-    border: none;
-    border: 1px solid #e0ff57c0;
-    color: #e0ff57c0;
-    font-size: 2em;
-    width: 6em;
-    text-align: center;
-}
+
+/* =========================================
+   ESTILOS ADICIONALES  
+/* ========================================= */
+
 
 .imagenRegalo{
+    width: 50rem;
+    margin-top: 5rem;
 }
 
-.felicitacion{
-    color: white;
-    font-size: 2.5em;
-    text-align: center;
+
+
+ /*  MEDIA QUERY PARA TABLET / PC
+========================================= */
+@media (min-width: 768px) {
+    .divPregunta2 {
+        flex-direction: row; /* fila en pantallas grandes */
+    }
+    .titulo { font-size: 3rem; }
+    .felicitacion { font-size: 2.5rem; }
+    .imagenRegalo { max-width: 500px; }
+    .divPregunta2 { flex-direction: row; } /* fila en tablet/pc */
 }
+
