@@ -7,9 +7,9 @@ const HasSidoBuenoComponent: React.FC = () => {
   return (
     <div>
     <div  className="divPregunta2">
- <button className="botonPregunta" onClick={() => setContent("¿Ah, con que sí has sido buena?")}>Sí!</button>
-      <button className="botonPregunta" onClick={() => setContent("Vaya, tienes muy claro que has sido muy buena")}>Pues claro que sí!</button>
-      <button className="botonPregunta" onClick={() => setContent("mal")}>No mucho :(</button>
+ <button className="botonPregunta" onClick={() => setContent("¿Ah, con que sí has sido buena?")}>Sí! <i className="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i></button>
+      <button className="botonPregunta" onClick={() => setContent("Vaya, tienes muy claro que has sido muy buena")}>Pues claro que sí! <i className="em em-smiley" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH"></i></button>
+      <button className="botonPregunta" onClick={() => setContent("mal")}>No mucho <i className="em em-worried" aria-role="presentation" aria-label="WORRIED FACE"></i></button>
 
       
       
